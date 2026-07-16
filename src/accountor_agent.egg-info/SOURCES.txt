@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/accountor_agent/__init__.py
+src/accountor_agent/__main__.py
+src/accountor_agent/cli.py
+src/accountor_agent/processor.py
+src/accountor_agent.egg-info/PKG-INFO
+src/accountor_agent.egg-info/SOURCES.txt
+src/accountor_agent.egg-info/dependency_links.txt
+src/accountor_agent.egg-info/requires.txt
+src/accountor_agent.egg-info/top_level.txt
+tests/test_processor.py

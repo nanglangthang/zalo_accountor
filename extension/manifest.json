@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Zalo Data Extractor",
+  "version": "0.1.0",
+  "description": "Extract structured data from Zalo chat messages and images into Excel",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://chat.zalo.me/*", "https://*.zalo.me/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Zalo Data Extractor",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.zalo.me/*", "https://*.zalo.me/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
