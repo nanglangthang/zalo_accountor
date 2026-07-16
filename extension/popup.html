@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zalo Data Extractor</title>
     <style>
-      body { font-family: Arial, sans-serif; width: 320px; padding: 12px; }
+      body { font-family: Arial, sans-serif; width: 360px; padding: 12px; }
       button { width: 100%; margin: 6px 0; padding: 8px; }
-      textarea { width: 100%; min-height: 80px; }
+      textarea { width: 100%; min-height: 70px; }
       .status { margin-top: 8px; color: #2563eb; }
+      .list { max-height: 140px; overflow: auto; border: 1px solid #ddd; padding: 6px; margin-top: 8px; }
+      .item { border-bottom: 1px solid #eee; padding: 4px 0; font-size: 12px; }
     </style>
   </head>
   <body>
@@ -16,8 +18,10 @@
     <button id="startBtn">Start Capture</button>
     <button id="stopBtn">Stop Capture</button>
     <button id="exportBtn">Export Excel</button>
-    <textarea id="output" readonly></textarea>
     <div id="status" class="status">Idle</div>
+    <div id="recordList" class="list"></div>
+    <textarea id="output" readonly></textarea>
+    <script src="xlsx.full.min.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>
